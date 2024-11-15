@@ -1,0 +1,555 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family:"poppins";
+  
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+  background-color: black;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-top: 10px;
+  font-size: 1.3rem;
+}
+
+nav a:hover{
+  color: #b74b4b;
+  text-decoration: underline;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+nav li:first-child a:hover{
+  text-decoration: none;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(103, 70, 70, 0.305);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+.image img{
+  border-radius: 50%; 
+  height: 500px; 
+  width: 400px; 
+  margin-top: 130px; 
+  margin-left: 150px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  margin-left: 250px;
+}
+.text h1{
+  font-size: 3rem;
+}
+.text p{
+  text-align: left;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.social-icons button{
+padding: 10px;
+border-radius: 50%;
+background-color: black;
+border-color: #b74b4b;
+margin-left: 30px;
+transition: box-shadow 0.3s ease-in-out;  
+}
+.social-icons button:hover{
+  box-shadow: 0 0 10px rgb(178, 75, 75 ), /* Outer glow */
+                0 0 20px rgb(178, 75, 75),
+                0 0 30px rgb(178, 75, 75);
+}
+.social-btn a{
+  text-decoration: none;
+}
+
+.btns{
+  display: flex;
+}
+
+.hire{
+  margin-top: 50px;
+  margin-left: 30px;
+}
+.hire button{
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 40px;
+  background-color: black;
+  border-color: #b74b4b;
+  color:#b74b4b;
+  width: 200px;
+  transition: box-shadow 0.3s ease-in-out;  
+  cursor: pointer;
+}
+.hire button:hover{
+  box-shadow: 0 0 10px rgb(178, 75, 75 ), /* Outer glow */
+  0 0 20px rgb(178, 75, 75),
+  0 0 30px rgb(178, 75, 75);
+}
+
+.Hero{
+  margin-bottom: 20vh;
+}
+
+.ski{
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  width: 100vw;
+  color: white;
+}
+
+#skills{
+  height: 100vh;
+  padding-top: 1px;
+}
+
+
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 equal-height rows */
+  gap: 10px;
+  row-gap: 30px;
+  font-family: "poppins";
+}
+.skils p{
+  font-family: "poppins";
+}
+
+.skill-tab{
+  margin: auto;
+  border: solid 2px #b74b4b;
+  border-radius: 10px;
+  height: 150px;
+  width: 300px;
+  background-color: rgb(5, 5, 5);
+}
+
+.skill-name{
+  padding-top: 20px;
+  padding-left: 30px;
+  color: white;
+}
+
+.loading-bk{
+  width: 200px;
+  height: 15px;
+  border: red 2px solid;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 30px;
+  background-color: rgb(216, 211, 211);
+}
+
+.loading{
+  width: 0;
+  height: 15px;
+  border-radius: 10px;
+  background-color: red;
+  transition: width 0.5s ease;
+}
+
+.loading .width-1{
+  width:0;
+}
+
+.skill-tab:hover .width-1{
+  width: 195px; 
+}
+
+
+.loading .width-2{
+  width:0;
+}
+
+.skill-tab:hover .width-2{
+  width: 150px; 
+}
+
+.loading .width-3{
+  width:0;
+}
+
+.skill-tab:hover .width-3{
+  width: 75px; 
+}
+
+.proj{
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  text-align: center;
+  width: 100vw;
+  color: white;
+}
+
+#project{
+  height: 100vh;
+  padding-top: 1px;
+}
+
+.project{
+  margin-bottom: 10vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 equal-height rows */
+  gap: 10px;
+  row-gap: 30px;
+  font-family: "poppins";
+}
+
+.image-container {
+  border: #b74b4b solid 2px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  width: 200px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area of the div */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.848); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transform: translateY(0); /* Start position, off-screen */
+}
+
+.overlay p{
+  margin-bottom: 40px;
+}
+
+.overlay button{
+  padding: 5px;
+  font-size: large;
+  border-radius: 40px;
+  background-color: black;
+  border-color: #b74b4b;
+  color:#b74b4b;
+  width: 50%;
+  transition: box-shadow 0.3s ease-in-out;  
+  cursor: pointer;
+}
+.overlay button:hover{
+  box-shadow: 0 0 10px rgb(178, 75, 75 ), /* Outer glow */
+  0 0 20px rgb(178, 75, 75),
+  0 0 30px rgb(178, 75, 75);
+}
+
+.overlay:hover{
+  box-shadow: 0 0 10px rgb(178, 75, 75 ), /* Outer glow */
+  0 0 20px rgb(178, 75, 75),
+  0 0 30px rgb(178, 75, 75);
+}
+
+
+.image-container:hover .overlay {
+  opacity: 1;
+  transform: translateY(0); /* Slide in */
+}
+
+
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #b74b4b;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+#contact{
+  margin-top: 200px;
+}
+#contact iframe{
+  border-radius: 10px;
+  margin-left: 50px;
+}
+/* From Uiverse.io by ClawHack1 */ 
+.contact-form {
+  background-color: rgb(5, 5, 5);
+  padding: 20px;
+  border: 2px solid #b74b4b;
+  border-radius: 10px;
+}
+
+.contact-form label {
+  color: white;
+}
+
+.contact-form .heading {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 12px;
+  font-weight: bold;
+  display: block;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  width: 200px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2.5px #b74b4b;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form button[type="submit"] {
+  background-color: rgb(178, 75, 75 );
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.contact-form button[type="submit"]:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.maps{
+  display: flex;
+  flex-direction: row;
+
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .image img{
+    height: 300px;
+    width: 300px;
+    margin-left: 50px;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hire button{
+    padding-left: 15px;
+    margin-left: 0;
+    width: 120px;
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .text{
+    text-align: left;
+  
+  }
+
+
+  .skills{
+    margin-bottom: 10vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 4 equal-width columns */
+    /* grid-template-rows: repeat(3, 1fr); 3 equal-height rows */
+    gap: 10px;
+    row-gap: 30px;
+  }
+
+  .project{
+    margin-bottom: 10vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 4 equal-width columns */
+    /* grid-template-rows: repeat(3, 1fr); 3 equal-height rows */
+    gap: 10px;
+    row-gap: 30px;
+    font-family: "poppins";
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
